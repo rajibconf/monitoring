@@ -42,6 +42,7 @@ cp .env.example .env
 ⚙️ Setup on Host Machine
 ---
 📁 3. Install Binaries on Host
+---
 Make sure node_exporter and promtail binaries are available in /usr/local/bin.
 ```bash
 # Example for Node Exporter
@@ -110,12 +111,16 @@ Password: admin
 ├── systemd/                   # systemd unit files for host setup
     └── node_exporter.service
     └── promtail.service
+├── nginx/                     # nginx config file for host setup
+    └── grafana.conf
 ├── .env.example               # Sample environment variables
 └── README.md                  # intructions
 ```
 
 📁 nginx/grafana.conf (Host Machine Configuration)
+---
 This Nginx configuration file sets up HTTPS reverse proxying for the Grafana dashboard running on your server.
+
 🔧 Instructions:
 - Location: This file resides in the nginx/ directory of your project.
 - Usage: It must be used on the host machine, not inside a container.
