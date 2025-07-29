@@ -1,0 +1,11 @@
+[Unit]
+Description=Promtail Log Collector
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/promtail -config.file=/opt/monitoring/promtail/promtail-config.yml
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
