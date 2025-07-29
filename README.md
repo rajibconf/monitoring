@@ -114,6 +114,27 @@ Password: admin
 └── README.md                  # intructions
 ```
 
+📁 nginx/grafana.conf (Host Machine Configuration)
+This Nginx configuration file sets up HTTPS reverse proxying for the Grafana dashboard running on your server.
+🔧 Instructions:
+- Location: This file resides in the nginx/ directory of your project.
+- Usage: It must be used on the host machine, not inside a container.
+- Change the SSL certificate & domain to the correct one in nginx/grafana.conf file.
+- Copy the file to the Nginx configuration folder on your host machine:
+```bash
+sudo cp nginx/grafana.conf /etc/nginx/conf.d/grafana.conf
+```
+- Test the Nginx configuration to make sure everything is okay:
+```bash
+sudo nginx -t
+```
+- Reload or restart Nginx:
+```bash
+sudo systemctl reload nginx
+# or if Nginx isn't running yet:
+sudo systemctl start nginx
+```
+
 📈 Dashboards
 - Grafana includes support for:
 - Prometheus metrics (Node Exporter, container metrics)
