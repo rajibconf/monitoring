@@ -12,12 +12,14 @@ The repository provides a complete observability stack using **Docker Compose**.
 ---
 
 ## 🧱 Services
+| Service       | Port | Description                              |
+| ------------- | ---- | ---------------------------------------- |
+| Prometheus    | 9090 | Metrics collection and monitoring        |
+| Grafana       | 3300 | Metrics and logs visualization           |
+| Loki          | 3400 | Log storage and querying backend         |
+| Node Exporter | 9100 | Host metrics exporter for Prometheus     |
+| Promtail      | 9080 | Log collection agent, sends logs to Loki |
 
-| Service     | Port | Description                         |
-|-------------|------|-------------------------------------|
-| Prometheus  | 9090 | Metrics collection and monitoring   |
-| Grafana     | 3300 | Metrics and logs visualization      |
-| Loki        | 3400 | Log storage and querying backend    |
 
 ---
 
