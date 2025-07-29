@@ -1,4 +1,4 @@
-# 📊 Monitoring Stack with Prometheus, Grafana, Loki & Promtail
+# 📊 Monitoring Stack with Prometheus, Grafana, Loki
 
 This project provides a full monitoring stack using Prometheus, Grafana, Loki, and Promtail using Docker Compose. It also includes system monitoring from the host using `node_exporter` and `promtail` as systemd services.
 The repository provides a complete observability stack using **Docker Compose**. It includes:
@@ -7,6 +7,7 @@ The repository provides a complete observability stack using **Docker Compose**.
 - **Grafana** for visualization
 - **Loki** for log aggregation
 - **Promtail** for sending logs to Loki
+- **Node_exporter** for sending metrics to Prometheus
 
 ---
 
