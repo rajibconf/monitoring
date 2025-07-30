@@ -26,6 +26,7 @@ services:
       - GF_SMTP_FROM_NAME=${GF_SMTP_FROM_NAME}
       - GF_SMTP_SKIP_VERIFY=${GF_SMTP_SKIP_VERIFY}
       - GF_SMTP_STARTTLS_POLICY=${GF_SMTP_STARTTLS_POLICY}
+      - GF_SERVER_ROOT_URL=${GF_SERVER_ROOT_URL}
     depends_on:
       - prometheus
       - loki
