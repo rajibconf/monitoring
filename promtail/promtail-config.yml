@@ -16,3 +16,21 @@ scrape_configs:
         labels:
           job: varlogs
           __path__: /var/log/**/*.log  # only scrape regular log files
+
+  - job_name: systemd-journal
+    journal:
+      max_age: 12h
+      labels:
+        job: systemd-journal
+    relabel_configs:
+      - source_labels: ['__journal__systemd_unit']
+        target_label: 'unit'
+
+
+  - job_name: ai-frontend-logs
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: pm2
+          __path__: /home/encodevps/.pm2/logs/*.log
