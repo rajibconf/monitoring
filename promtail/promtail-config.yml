@@ -8,17 +8,11 @@ positions:
 clients:
   - url: http://localhost:3400/loki/api/v1/push
 
-
 scrape_configs:
   - job_name: system
-    decompression:
-      enabled: true       # enable decompression
-      initial_delay: 10s  # delay before starting to decompress
-      format: gz          # decompression format (gz for gzip)
     static_configs:
       - targets:
           - localhost
         labels:
           job: varlogs
-          __path__: /var/log/**/*.gz   # match compressed log files
-
+          __path__: /var/log/**/*.log  # only scrape regular log files
