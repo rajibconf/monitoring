@@ -25,23 +25,9 @@ The repository provides a complete observability stack using **Docker Compose**.
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/rajibconf/monitoring.git
-cd monitoring
-```
-
-2. Set up environment variables
-Copy the example .env and configure if needed:
-
-```bash
-cp .env.example .env
-```
-
 ⚙️ Setup on Host Machine
 ---
-📁 3. Install Binaries on Host
+📁 1. Install Binaries on Host
 ---
 Make sure node_exporter and promtail binaries are available in /usr/local/bin.
 ```bash
@@ -57,6 +43,20 @@ wget https://github.com/grafana/loki/releases/latest/download/promtail-linux-amd
 unzip promtail-linux-amd64.zip
 chmod +x promtail-linux-amd64
 sudo mv promtail-linux-amd64 /usr/local/bin/promtail
+```
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/rajibconf/monitoring.git
+cd monitoring
+```
+
+3. Set up environment variables
+Copy the example .env and configure if needed:
+
+```bash
+cp .env.example .env
 ```
 
 🛠️ 4. Configure Systemd Services
